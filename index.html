@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel ="stylesheet" href="style.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Weather App</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul id ="middle" class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a id ="one" class="nav-link active" aria-current="page" href="#">Delhi</a>
+              </li>
+              <li class="nav-item">
+                <a id ="two"  class="nav-link active" href="#">Mumbai</a>
+              </li>
+              <li class="nav-item">
+                <a id ="three"  class="nav-link active" href="#">Bengaluru</a>
+              </li>
+              <li class="nav-item">
+                <a id ="four"  class="nav-link active" href="#">Amritsar</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input id ="boxnew" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" id ="search" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="display-4 fw-normal"><span id ="place"></span></h1>
+      </div>
+      <main>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Temperature Info</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><span id="temp">--</span><small class="text-muted fw-light"><span>&#8451;</span></small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li> Temperature in F :  <span id ="min_temp">--</span></li>
+                  <li>UV : <span id ="max_temp">--</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Humidity </h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><span id ="humidity" >-- </span><small class="text-muted fw-dark"> </small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Feels Like in C : <span id ="feels_like">--</span></li>
+                    <li> Feels Like in F : <span id ="cloud_pct">--</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+              <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">Wind </h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><span id="wind_speed">-- </span><small class="text-muted fw-light"> Km/hr</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Wind Degrees : <span id ="wind_degrees">--</span></li>
+                    <li>Visibility : <span id ="sunset">--</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <h2 class="display-6 text-center mb-4">Famous Places</h2>
+    
+        <div class="table-responsive">
+          <table class="table text-center">
+            <thead>
+              <tr>
+                <th style="width: 7%;"></th>
+                <th style="width: 17%;">Temperature</th>
+                <th style="width: 40%;">Humidity </th>
+                <th style="width: 22%;">Wind</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"class="text-start">New York</th>
+                <td><span id ="temp1">--</span></td>
+                <td><span id ="hum1">--</span></td>
+                <td><span id ="wind1">--</span></td>
+            
+                
+                
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Delhi</th>
+                <td><span id ="temp2">--</span></td>
+                <td><span id ="hum2">--</span></td>
+                <td><span id ="wind2">--</span></td>
+            
+              </tr>
+            </tbody>
+    
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">Los Angeles</th>
+                <td><span id ="temp3">--</span></td>
+                <td><span id ="hum3">--</span></td>
+                <td><span id ="wind3">--</span></td>
+            
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Venice</th>
+                <td><span id ="temp4">--</span></td>
+                <td><span id ="hum4">--</span></td>
+                <td><span id ="wind4">--</span></td>
+            
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Kolkata</th>
+                <td><span id ="temp5">--</span></td>
+                <td><span id ="hum5">--</span></td>
+                <td><span id ="wind5">--</span></td>
+            
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Paris </th>
+                <td><span id ="temp6">--</span></td>
+                <td><span id ="hum6">--</span></td>
+                <td><span id ="wind6">--</span></td>
+            
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+      <script src ="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>

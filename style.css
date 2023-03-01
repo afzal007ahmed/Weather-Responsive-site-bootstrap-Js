@@ -1,0 +1,16 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    
+}
+#middle{
+    justify-content: center;
+    align-items: center;
+    padding-left: 140px;
+    margin: auto;
+}
+main{
+    margin: 0px 40px 0px 40px;
+}
+
